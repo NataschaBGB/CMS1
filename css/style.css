@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../img/bodybg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color:white;
+}
+
+/* overall styling */
+.container {
+    display: grid;
+    grid-template-areas: "aside header header header"
+                        "aside main main main"
+                        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px 1fr;
+    width: 1200px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: rgb(247, 173, 37);
+    font-size: larger;
+}
+a:hover {
+    text-decoration: overline;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 20px;
+}
+button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 0px 0px 50px 50px;
+    align-self: center;
+    background-color: green;   
+}
+button:hover {
+    background-color: rgb(137, 184, 137);
+    cursor:pointer;
+}
+
+
+ /* header styling */
+header {
+    background-image: url(../img/gamingheader.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: header;
+}
+header h1 {
+    position: absolute;
+    top: 120px;
+    max-width: 300px;;
+    color: rgb(218, 5, 5);
+    padding-left: 20px;
+    font-size: 3rem;
+    font-family:fantasy;
+}
+header div ul {
+    background-color: rgba(207, 0, 0, 0.582);
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px;
+    list-style-type: none;
+}
+
+
+/* side-bar styling */
+aside {
+    position: relative;
+    grid-area: aside;
+    background-color: rgb(175, 0, 0);
+    padding: 40px;
+}
+aside h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: rgb(2, 219, 13);
+}
+aside ul {
+    margin-top: 60px;
+}
+aside .newArticle {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.new input {
+    padding: 0.5rem;
+}
+.new select {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/* main styling */
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    gap: 15px;
+    margin: 20px;
+}
+main .product {
+    position: relative;
+    border: 1px solid transparent;
+    height: 600px;
+    width: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+main .product img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    border-radius: 50px 50px 0px 0px;
+    border: 1px solid black;
+}
+main .product:hover {
+    border: 1px solid grey;
+}
+main .product .product-text {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+/* footer styling */
+footer {
+    grid-area: footer;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(207, 0, 0, 0.582);
+}
+footer .info {
+    margin-left: 100px;
+}
+footer .info h4 {
+    margin-top: 10px;
+}
+footer .SoMe {
+    align-self: center;
+    text-align: center;
+}
+footer .SoMe img {
+    width: 40px;
+    margin-top: 20px;
+}
+footer .more {
+    margin-right: 100px;
+}
+footer a {
+    color: rgb(2, 219, 13);
+    margin: 10px;
+}
