@@ -92,18 +92,39 @@ aside h1 {
 aside ul {
     margin-top: 60px;
 }
+aside .login {
+    text-align: center;
+    font-size: larger;
+    position: absolute;
+    left: 0;
+}
+aside .login h2 {
+    text-decoration: underline;
+}
+aside .login input[type=submit] {
+    margin-bottom: 10px;
+}
 aside .newArticle {
-    display: none;
+    /* display: none; */
+    text-align: center;
+    font-size: larger;
     position: absolute;
     bottom: 10px;
     left: 10px;
 }
 .new input {
+    border-radius: 50px;
     padding: 0.5rem;
+    margin-bottom: 5px;
 }
 .new select {
+    border-radius: 50px;
     padding: 0.5rem;
     width: 100%;
+}
+.new .btn {
+    width: 60%;
+    margin-top: 10px;
 }
 
 /* main styling */
