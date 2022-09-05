@@ -55,7 +55,7 @@
                 <a href="#"><li>Contact</li></a>
                 <a href="#"><li>About Us</li></a>
             </ul>
-            <form action="include/login.php" method="post" class="login">
+            <form action="./include/login.php" method="post" class="login">
             <hr>
             <h2>Log in</h2>
                 <div>
@@ -64,13 +64,15 @@
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="********"/>
-                </div>                    <div>
+                    <input type="password" name="userPass" id="userPass" placeholder="********"/>
+                </div>
+                <div>
                     <input type="submit" value="Log in"/>
                 </div>
                 <a href="include/createUser.php">Create New User</a>
                 <hr>
             </form>
+            
         </nav>
 
         <!-- form til at indsætte nye artikler uden at skulle igennem databasen -->

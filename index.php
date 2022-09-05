@@ -4,7 +4,7 @@
     ?>
 
         <main>
-        <!--
+        <!-- Kolonner i min db --
         img src
         img alt
         description
