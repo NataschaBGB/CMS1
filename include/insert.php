@@ -21,6 +21,7 @@
     $stmt->execute([NULL, $imgSrc, $imgAlt, $description,
     $price, $category, $published, $author]);
 
+    // $dbh = NULL;
     
 
     header("location: ../index.php");

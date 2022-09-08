@@ -16,7 +16,7 @@ body {
                         "aside main main main"
                         "footer footer footer footer";
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 400px 1fr;
+    /* grid-template-rows: 400px 1fr; */
     width: 1200px;
     margin: auto;
 }
@@ -79,10 +79,10 @@ header div ul {
 
 /* side-bar styling */
 aside {
-    position: relative;
     grid-area: aside;
     background-color: rgb(175, 0, 0);
     padding: 40px;
+    max-width: 70%;
 }
 aside h1 {
     font-size: 2rem;
@@ -95,39 +95,26 @@ aside ul {
 aside .login {
     text-align: center;
     font-size: larger;
-    position: absolute;
-    left: 0;
 }
 aside .login h2 {
     text-decoration: underline;
 }
 aside .login input[type=submit] {
-    margin-bottom: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
 }
-aside .newArticle {
-    /* display: none; */
-    text-align: center;
-    font-size: larger;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
-.new input {
-    border-radius: 50px;
-    padding: 0.5rem;
-    margin-bottom: 5px;
-}
-.new select {
-    border-radius: 50px;
-    padding: 0.5rem;
-    width: 100%;
-}
-.new .btn {
-    width: 60%;
-    margin-top: 10px;
+aside .newArticle form input[type=submit] {
+    font-size: 1rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-/* main styling */
+/* main styling for products */
 main {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -161,6 +148,48 @@ main .product .product-text {
     flex-direction: column;
     gap: 10px;
     margin-left: 10px;
+}
+
+/* main styling for front page */
+
+main .front {
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+main .headline {
+    grid-column: 1/4;
+    height: 300px;
+    background-color: rgb(64, 90, 81);
+}
+
+/* main styling for new article form */
+main .new {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
+    column-gap: 80px;
+}
+.new input {
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.new select {
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 105%;
+}
+.new .btn {
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    cursor: pointer;
+    width: 30%;
 }
 
 /* footer styling */
