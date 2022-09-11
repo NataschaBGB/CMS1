@@ -38,8 +38,9 @@
                 $newPassword1 = $_POST['newPassword1'];
                 $newPassword2 = $_POST['newPassword2'];
 
+                // og begge passwords matcher
                 if($newPassword1 === $newPassword2) {
-                    // og begge passwords matcher
+                    // opret en ny bruger med det valgte navn
                     include_once("./include/connect.php");
                     $sql = "SELECT * FROM users WHERE dbUserName = ?";
                     $stmt = $dbh->prepare($sql);
@@ -48,6 +49,7 @@
                     // og hvis brugeren ikke allerede eksiterer i databasen
                     if(empty($row = $stmt->fetch(PDO::FETCH_ASSOC))) {
                         // så indsæt den nye bruger i databasen med det valgte brugernavn og kodeord
+                        // DENNE DEL VIRKER IKKE
                         $sql = "INSERT INTO `users` (`userId`, `dbUserName`, `userPass`, `accesLevel`) VALUES (?, ?, ?, ?);";
                         $tmt = $dbh->prepare($sql);
                         $stmt->execute([NULL, $newUserName, $newPassword2, 3]);
