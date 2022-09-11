@@ -94,7 +94,7 @@
                             <input type="submit" value="Log in"/>
                         </div>
          
-                        <a href="include/createUser.php">Create New User</a>
+                        <a href="createUser.php">Create New User</a>
                         <hr>
                     </form>
                     <?php }

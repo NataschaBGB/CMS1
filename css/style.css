@@ -171,13 +171,13 @@ main .new {
     display: grid;
     grid-template-columns: 20rem 20rem;
     grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
-    column-gap: 80px;
+    column-gap: 120px;
 }
 .new input {
     border-radius: 10px;
     padding: 0.5rem;
     margin-bottom: 5px;
-    width: 100%;
+    width: 120%;
 }
 .new select {
     border-radius: 10px;
@@ -187,10 +187,28 @@ main .new {
 .new .btn {
     position: absolute;
     bottom: 0px;
-    left: 250px;
+    right: 0px;
     cursor: pointer;
     width: 30%;
 }
+/* main create users styling */
+.createUsers form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    text-align: center;
+}
+.createUsers form .lbl {
+    width: 50%;
+    margin: 20px auto;
+}
+.createUsers form input[type=submit] {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
 
 /* footer styling */
 footer {
