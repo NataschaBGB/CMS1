@@ -7,7 +7,7 @@
     <div class="lbl">
         <label for="imgSrc">Photo file name</label>
         <div class="input">
-            <input type="text" name="imgSrc" placeholder="image source with .jpg">
+            <input type="text" name="imgSrc" placeholder="image source with .jpg" required>
         </div>
     </div>
 
@@ -47,13 +47,6 @@
         <label for="published">Published on</label>
         <div class="input">
             <input type="text" id="published" name="published" placeholder="yyyy-mm-dd">
-        </div>
-    </div>
-    
-    <div class="lbl">
-        <label for="author">Article author</label>
-        <div class="input">
-            <input type="text" id="author" name="author" placeholder="Natascha Bjerning">
         </div>
     </div>
 

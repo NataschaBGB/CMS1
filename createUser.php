@@ -51,7 +51,7 @@
                         // så indsæt den nye bruger i databasen med det valgte brugernavn og kodeord
                         // DENNE DEL VIRKER IKKE
                         $sql = "INSERT INTO `users` (`userId`, `dbUserName`, `userPass`, `accesLevel`) VALUES (?, ?, ?, ?);";
-                        $tmt = $dbh->prepare($sql);
+                        $stmt = $dbh->prepare($sql);
                         $stmt->execute([NULL, $newUserName, $newPassword2, 3]);
                     }
                     else {

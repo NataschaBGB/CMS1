@@ -23,6 +23,7 @@
         // gem brugernavn fra databasen (dbUserName) i variabel $_SESSION
         $_SESSION['username'] = $row['dbUserName'];
         $_SESSION['accesLevel'] = $row['accesLevel'];
+        $_SESSION['userId'] = $row['userId'];
         // og retuner til forsiden
         header("location: ../index.php");
     }

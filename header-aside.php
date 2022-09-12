@@ -54,7 +54,7 @@
                 
                 <?php
                     // hvis session er aktiv / hvis brugerens username og password  eksisterer i databasen
-                    if(isset($_SESSION)) {
+                    if(isset($_SESSION['username'])) {
                     // skriv Welcome [username] (det brugernavn der er logget ind med)
                         echo "<h4>Welcome " . $_SESSION['username'] . "</h4>";
                     }
@@ -105,12 +105,12 @@
             </nav>
 
             <!-- form til at indsætte nye artikler uden at skulle igennem databasen -->
-            <!-- TILFØJ plus img (og checkbox) til at få form frem -->
-            <div class="newArticle">
-                <form action="createArticle.php">
-                    <input type="submit" value="+ New Article">
-                </form>
-            </div>
-
+            <?php
+                if((isset($_SESSION['username']))) { ?>
+                <div class="newArticle">
+                    <form action="createArticle.php">
+                        <input type="submit" value="+ New Article">
+                    </form>
+                </div>
+            <?php } ?>
         </aside>
-    <!-- </div> -->

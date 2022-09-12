@@ -15,7 +15,7 @@ body {
     grid-template-areas: "aside header header header"
                         "aside main main main"
                         "footer footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 250px 1fr 1fr 1fr;
     /* grid-template-rows: 400px 1fr; */
     width: 1200px;
     margin: auto;
@@ -82,7 +82,7 @@ aside {
     grid-area: aside;
     background-color: rgb(175, 0, 0);
     padding: 40px;
-    max-width: 70%;
+    /* max-width: 200px; */
 }
 aside h1 {
     font-size: 2rem;

@@ -2,6 +2,7 @@
 
     include_once("./connect.php");
     
+    session_start();
 
     $imgSrc = $_POST['imgSrc'];
     $imgAlt = $_POST['imgAlt'];
@@ -9,17 +10,14 @@
     $price = $_POST['price'];
     $category = $_POST['category'];
     $published = $_POST['published'];
-    $author = $_POST['author'];
+    $authorId = $_SESSION['userId'];
 
-    $sql = "INSERT INTO `gamingarticle` (`articleId`,
-    `imgSrc`, `imgAlt`, `description`, `price`,
-    `category`, `published`, `author`)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO `gamingarticle` (`articleId`, `imgSrc`, `imgAlt`, `description`, `price`, `category`, `published`, `authorId`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     
     $stmt = $dbh->prepare($sql);
 
     $stmt->execute([NULL, $imgSrc, $imgAlt, $description,
-    $price, $category, $published, $author]);
+    $price, $category, $published, $authorId]);
 
     // $dbh = NULL;
     

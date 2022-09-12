@@ -16,7 +16,7 @@
     require_once './include/connect.php';
 
     // vælg alt* fra tabellen gamingarticle i databasen gamingwebsite
-    $sql = "SELECT * FROM gamingarticle";
+    $sql = "SELECT gamingarticle.*, users.dbUserName FROM gamingarticle JOIN users ON gamingarticle.authorId = users.userId";
 
     // prepare alt data
     $stmt = $dbh->prepare($sql);
@@ -38,7 +38,7 @@
                     <p class="price">$<?php echo $row['price']; ?></p>
                     <p class="category">Category: <?php echo $row['category']; ?></p>
                     <p class="date">Published: <?php echo $row['published']; ?></p>
-                    <p class="author">Author: <?php echo $row['author']; ?></p>
+                    <p class="author">Author: <?php echo $row['dbUserName']; ?></p>
                 </div>
                 <button class="buy">Køb</button>
             </article>
