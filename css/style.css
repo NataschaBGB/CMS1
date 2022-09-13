@@ -9,7 +9,7 @@ body {
     color:white;
 }
 
-/* overall styling */
+/* OVERALL STYLING */
 .container {
     display: grid;
     grid-template-areas: "aside header header header"
@@ -50,7 +50,7 @@ button:hover {
 }
 
 
- /* header styling */
+ /* HEADER STYLING */
 header {
     background-image: url(../img/gamingheader.jpg);
     height: 400px;
@@ -77,12 +77,11 @@ header div ul {
 }
 
 
-/* side-bar styling */
+/* SIDE BAR STYLING */
 aside {
     grid-area: aside;
     background-color: rgb(175, 0, 0);
     padding: 40px;
-    /* max-width: 200px; */
 }
 aside h1 {
     font-size: 2rem;
@@ -114,7 +113,7 @@ aside .newArticle form input[type=submit] {
     cursor: pointer;
 }
 
-/* main styling for products */
+/* MAIN STYLING FOR PRODUCTS */
 main {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -150,8 +149,7 @@ main .product .product-text {
     margin-left: 10px;
 }
 
-/* main styling for front page */
-
+/* MAIN STYLING FOR FRONT PAGE */
 main .front {
     height: 300px;
     width: 300px;
@@ -159,13 +157,14 @@ main .front {
     display: flex;
     flex-direction: column;
 }
+/* weather map */
 main .headline {
     grid-column: 1/4;
-    height: 300px;
+    height: 600px;
     background-color: rgb(64, 90, 81);
 }
 
-/* main styling for new article form */
+/* MAIN STYLING FOR NEW ARTICLE FORM */
 main .new {
     position: relative;
     display: grid;
@@ -191,26 +190,42 @@ main .new {
     cursor: pointer;
     width: 30%;
 }
-/* main create users styling */
+
+/* MAIN CREATE NEW USER STYLING */
 .createUsers form {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 900px;
+    justify-content: center;
+}
+.createUsers form h1 {
     text-align: center;
 }
 .createUsers form .lbl {
     width: 50%;
     margin: 20px auto;
+    font-size: 1.5rem;
 }
 .createUsers form input[type=submit] {
-    position: absolute;
-    bottom: 0px;
-    right: 0;
+    width: 40%;
+    margin-top: 20px;
+}
+.createUsers .userCreated {
+    background-color: aliceblue;
+    color: rgb(26, 165, 26);
+    margin: auto;
+    width: max-content;
+}
+.createUsers .userError {
+    width: max-content;
+    background-color: aliceblue;
+    color: rgb(250, 35, 35);
+    margin: auto;
 }
 
 
-/* footer styling */
+/*  FOOTER STYLING */
 footer {
     grid-area: footer;
     padding: 20px;

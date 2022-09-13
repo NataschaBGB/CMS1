@@ -27,9 +27,6 @@
             </div>
         </div>
 
-        <div>
-            <input class="btn" type="submit" value="Create User">
-        </div>
 
         <?php
             // hvis username og password x 2 er indtastet
@@ -49,23 +46,27 @@
                     // og hvis brugeren ikke allerede eksiterer i databasen
                     if(empty($row = $stmt->fetch(PDO::FETCH_ASSOC))) {
                         // så indsæt den nye bruger i databasen med det valgte brugernavn og kodeord
-                        // DENNE DEL VIRKER IKKE
                         $sql = "INSERT INTO `users` (`userId`, `dbUserName`, `userPass`, `accesLevel`) VALUES (?, ?, ?, ?);";
                         $stmt = $dbh->prepare($sql);
                         $stmt->execute([NULL, $newUserName, $newPassword2, 3]);
+                        echo "<h2 class=\"userCreated\">User created! You can now log in.</h2>";
                     }
                     else {
                         // hvis brugeren allerede eksisterer
-                        echo "A user with that name already exists. Please choose another name.";
+                        echo "<h2 class=\"userError\">A user with that name already exists. Please choose another name.</h2>";
                     }
                 }
                 else {
                     // hvis begge passwords ikke matcher
-                    echo "Password doesn't match. Please type password again.";
+                    echo "<h2 class=\"userError\">Password doesn't match. Please type password again.</h2>";
                 }
             }
         ?>
-    
+
+        <div>
+            <input type="submit" value="Create User">
+        </div>
+
 </main>
 
 
